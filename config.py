@@ -44,11 +44,13 @@ TOP_K = int(os.getenv("TOP_K", "4"))
 POSTGRES_HOST = os.getenv("POSTGRES_HOST", "localhost")
 POSTGRES_PORT = int(os.getenv("POSTGRES_PORT", "5432"))
 POSTGRES_USER = os.getenv("POSTGRES_USER", "postgres")
-POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "postgres")
-POSTGRES_DB = os.getenv("POSTGRES_DB", "aventro_rag_db")
+POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "Pranay1*@")
+POSTGRES_DB = os.getenv("POSTGRES_DB", "ai training")
 TABLE_NAME = os.getenv("TABLE_NAME", "document_chunks")
+
+from urllib.parse import quote_plus
 
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}",
+    f"postgresql://{POSTGRES_USER}:{quote_plus(POSTGRES_PASSWORD)}@{POSTGRES_HOST}:{POSTGRES_PORT}/{quote_plus(POSTGRES_DB)}",
 )
