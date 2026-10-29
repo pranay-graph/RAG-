@@ -37,7 +37,7 @@ EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "nomic-embed-text")
 EMBEDDING_DIMENSIONS = int(os.getenv("EMBEDDING_DIMENSIONS", "768"))
 
 # --- 4. Local LLM used only for the final "ask a question" demo ---------
-LLM_MODEL = os.getenv("LLM_MODEL", "llama3.2")
+LLM_MODEL = os.getenv("LLM_MODEL", "llama3.1")
 TOP_K = int(os.getenv("TOP_K", "4"))
 
 # --- 5. Postgres + pgvector ------------------------------------------------
